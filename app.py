@@ -13,7 +13,7 @@ def get_quiz():
       parts = line.split("|")
 
       Q = parts[0]
-      A = parts[1]
+      A = parts[1].lower()
 
       fcards[Q] = A
   return fcards
