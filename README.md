@@ -8,7 +8,10 @@ Type `quiz` to start the flashcard quiz.
 
 In the quiz function you'll be given a random question from the given flashcards. You an either answer the questions(and earn point for your score) or you can:
 type `answer` to get the answer to the current question(will subtract 1 from your score),
-type `exit` to exit the quiz mode into the main menu.
+type `score` to see your current score
+type `hs` to see your current high score
+type `exit` to exit the quiz mode into the main menu
 
 Type `add` to add a question to your flashcard set.
+Type `hs` to see your current high score.
 Type `exit` to exit the application.

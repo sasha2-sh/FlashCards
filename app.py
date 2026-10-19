@@ -107,10 +107,10 @@ def quiz():
         print(f"(+0) Answer: {A}")
         break
       elif uA == "score":
-        print(score)
+        print(f"Your current score is: {score}")
         break
       elif uA == "hs":
-        print(fetch_hs())
+        print(f"Your current high score is: {fetch_hs()}")
         break
       elif uA == A:
         print("(+1) Correct!")
@@ -123,7 +123,7 @@ def quiz():
 
 def main():
   while True:
-    print('Type "quiz" to study flashcards, and "add" to add a question to the flashcards.')
+    print('Type "quiz" to study flashcards, "add" to add a question to the flashcards and "hs" to see the current high score.')
     print('Type "exit" to exit.')
     uI = input("> ")
 
@@ -132,10 +132,10 @@ def main():
     elif uI == "add":
       add_quiz()
     elif uI == "hs":
-      print(fetch_hs())
+      print(f"Your curent high score is: {fetch_hs()}")
     elif uI == "exit":
       print("Thank you for playing. I mean studying... :D")
-      time.sleep(5)
+      time.sleep(3)
       break
     else:
       print("Try Again!")
