@@ -53,6 +53,7 @@ def save_score(timestamp, score):
 
   if not lines:
     lines.append(new_entry + "\n")
+    lines.append(new_entry + "\n")
   elif is_new_record:
     lines[0] = new_entry + "\n"
     lines.append(new_entry + "\n")
@@ -88,6 +89,7 @@ def quiz():
 
 
   print(f"Your current high score is {fetch_hs()}")
+
   while quiz_running:
     Q = random.choice(list(fcards.keys()))
     A = fcards[Q]
@@ -108,7 +110,7 @@ def quiz():
         print(score)
         break
       elif uA == "hs":
-        print = fetch_hs()
+        print(fetch_hs())
         break
       elif uA == A:
         print("(+1) Correct!")
