@@ -32,7 +32,7 @@ def quiz():
   score = 0
 
 
-  if not fcards and not fcards:
+  if not fcards:
     print("No questions found!")
     return
   
