@@ -1,4 +1,5 @@
 import random
+import time
 
 def get_quiz():
   fcards = {}
@@ -61,9 +62,19 @@ def quiz():
         score -= 1
         break
 
-
-
-
-
-
 def main():
+  while True:
+    print('Type "quiz" to study flashcards, and "add" to add a question to the flashcards.')
+    print('Type "exit" to exit.')
+    uI = input("> ")
+
+    if uI == "quiz":
+      quiz()
+    elif uI == "add":
+      add_quiz()
+    elif uI == "exit":
+      print("Thank you for playing. I mean studying... :D")
+      time.sleep(5)
+      break
+    else:
+      print("Try Again!")      
