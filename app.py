@@ -1,3 +1,5 @@
+import random
+
 def get_quiz():
   fcards = {}
 
@@ -15,7 +17,6 @@ def get_quiz():
       fcards[Q] = A
   return fcards
 
-
 def add_quiz():
   Q = input("Whats the question you would like to add? > ")
   A = input("Whats the answer for that question? > ")
@@ -24,3 +25,45 @@ def add_quiz():
 
   with open("quiz.txt", "a") as file:
     file.write(line + "\n")
+
+def quiz():
+  fcards = get_quiz()
+  quiz_running = True
+  score = 0
+
+
+  if not fcards and not fcards:
+    print("No questions found!")
+    return
+  
+  while quiz_running:
+    Q = random.choice(list(fcards.keys()))
+    A = fcards[Q]
+
+    print(f"Question: {Q}")
+    while True:
+      uA = input("> ").strip()
+
+      if uA == "exit":
+        print(f"\nQuiz ended. Your final score is {score}!")
+        quiz_running = False
+        break
+      elif uA == "answer":
+        print(f"Answer: {A}")
+        score -= 1
+        break
+      elif uA == A:
+        print("Correct!")
+        score += 1
+        break
+      else:
+        print("Incorrect!")
+        score -= 1
+        break
+
+
+
+
+
+
+def main():
