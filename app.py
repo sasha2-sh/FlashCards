@@ -77,4 +77,7 @@ def main():
       time.sleep(5)
       break
     else:
-      print("Try Again!")      
+      print("Try Again!")
+
+if __name__ == "__main__":
+    main()
