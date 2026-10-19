@@ -51,15 +51,14 @@ def quiz():
         quiz_running = False
         break
       elif uA == "answer":
-        print(f"Answer: {A}")
-        score -= 1
+        print(f"(+0) Answer: {A}")
         break
       elif uA == A:
-        print("Correct!")
+        print("(+1) Correct!")
         score += 1
         break
       else:
-        print("Incorrect!")
+        print(f"(-1) Incorrect! Correct answer was: {A}")
         score -= 1
         break
 
