@@ -20,12 +20,13 @@ def get_quiz():
 
 def add_quiz():
   Q = input("Whats the question you would like to add? > ")
+  Q = "".join(["\n", Q])
   A = input("Whats the answer for that question? > ")
   QnA = [Q, A]
   line = "|".join(QnA)
 
   with open("quiz.txt", "a") as file:
-    file.write(line + "\n")
+    file.write(line)
 
 def quiz():
   fcards = get_quiz()
@@ -43,7 +44,7 @@ def quiz():
 
     print(f"Question: {Q}")
     while True:
-      uA = input("> ").strip()
+      uA = input("> ").strip().lower()
 
       if uA == "exit":
         print(f"\nQuiz ended. Your final score is {score}!")
